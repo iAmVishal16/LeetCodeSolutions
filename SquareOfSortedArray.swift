@@ -3,6 +3,7 @@
 // Then, it applies the quicksort algorithm to sort the squared array. Quicksort has an average time complexity of O(n log n). 
 // Therefore, the overall time complexity of the code is O(n) + O(n log n), which simplifies to O(n log n). 
 
+let nums = [-4,-1,0,3,10]
 func sortedSquares(_ nums: [Int]) -> [Int] {
     var arr = nums
     var resultArray = [Int]()
@@ -62,3 +63,7 @@ func quickSort(_ arr: inout [Int], _ low: Int, _ high: Int) {
 }
 
 sortedSquares(nums)
+
+// solution using higher order function
+let sorted = nums.map { $0 * $0 }.sorted()
+print(sorted)
